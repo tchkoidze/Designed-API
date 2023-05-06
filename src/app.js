@@ -29,4 +29,4 @@ app.get("/api/projects", getAllProject);
 app.use("/api", webRouter);
 app.use("/", ...swaggerMiddleware());
 
-app.listen(8000);
+app.listen(process.env.PORT || 8000);
