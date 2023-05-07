@@ -9,5 +9,5 @@ export const getAllCategories = async (req, res) => {
     };
   });
 
-  return res.status(200).json(newdata);
+  return res.status(200).json(newData);
 };
