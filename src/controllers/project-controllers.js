@@ -10,8 +10,10 @@ export const getWebProjects = async (req, res) => {
   const data = await Project.find({ category: "web" });
   const newData = data.map((element) => {
     return {
-      id: element.id,
-      name: element.name,
+      image: element.image,
+      title: element.title,
+      description: element.description,
+      category: element.category,
     };
   });
 
