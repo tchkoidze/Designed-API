@@ -9,6 +9,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import webRouter from "./routs/web-router.js";
 import swaggerMiddleware from "./middlewares/swagger-middleware.js";
+import categoryRouter from "./routs/category-router.js";
 dotenv.config();
 
 connect();
@@ -27,6 +28,7 @@ app.use("/images", express.static("./public/images"));
 app.get("/api/projects", getAllProject);
 //app.get("/api/projects/web", getWebProjects);
 app.use("/api", webRouter);
+app.use("/api", categoryRouter);
 app.use("/", ...swaggerMiddleware());
 
 app.listen(process.env.PORT || 8000);
