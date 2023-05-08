@@ -5,6 +5,8 @@ info:
   version: 0.1.9
 
 servers:
+  - url: https://designed-api-production.up.railway.app/api
+    description: production server
   - url: http://localhost:8000/api
     description: local server
 paths:
